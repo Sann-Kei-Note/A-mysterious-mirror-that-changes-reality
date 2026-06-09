@@ -2,6 +2,51 @@
 
 <head>
 
+<style>
+/* 全体の基本設定 */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+    line-height: 1.7;
+}
+
+/* テーブルのズレ防止（最重要） */
+table {
+    width: 100%;
+    table-layout: fixed;   /* セル幅を固定して折り返しを安定化 */
+    border-collapse: collapse;
+}
+
+td {
+    vertical-align: top;   /* 上揃えで左右のズレを防ぐ */
+    word-break: break-word; /* 長文でも安定して折り返す */
+    padding: 10px;
+}
+
+/* 左右テーブルを横並びにしている親要素（あなたのHTML構造に合わせて） */
+.tables {
+    display: flex;
+    gap: 20px;
+}
+
+/* 左右のテーブルを常に同じ幅にする */
+.tables table {
+    width: 50%;
+}
+
+/* スマホ対応（横幅が狭い時は縦並び） */
+@media (max-width: 800px) {
+    .tables {
+        flex-direction: column;
+    }
+    .tables table {
+        width: 100%;
+    }
+}
+</style>
+
+
 <meta charset="UTF-8">
 
 <TITLE>現実を変える不思議な鏡</TITLE>
